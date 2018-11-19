@@ -39,7 +39,7 @@ app.post('/webhook', function (req, res) {
         res.sendStatus(400);
     }*/
 
-    console.log('>> received', req.rawBody);
+    console.log('>> received', JSON.stringify(JSON.parse(req.rawBody), null, 4));
     res.sendStatus(200);
 
 });
